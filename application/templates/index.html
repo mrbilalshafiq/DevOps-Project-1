@@ -4,17 +4,12 @@
 		<h1>Halal World</h1>
 		<h2>Restaurant & Takeaway Directory</h2>
 		<br>
-		<h3>View restaurants</h3>
-		<p><a href="{{ url_for('view') }}">Click here to see listings</a></p>
-		<br>
-		<h3>Add listing</h3>
-		<p><a href="{{ url_for('add') }}">Click here to add a listing</a></p>
-		<br>
-                <h3>Edit listing</h3>
-                <p><a href="{{ url_for('update') }}">Click here to edit your listing</a></p>
-		<br>
-                <h3>Delete listing</h3>
-                <p><a href="{{ url_for('delete') }}">Click here to delete your listing</a></p>
+		<h3>View restaurants</h3><p><a href="{{ url_for('view') }}">Click here to see listing</a></p>
+		<h3>Add listing</h3><p><a href="{{ url_for('add') }}">Click here to add a listing</a></p>
+		<h3>Edit listing</h3><p><a href="{{ url_for('update') }}">Click here to edit your listing</a></p>
+                <h3>Delete listing</h3><p><a href="{{ url_for('delete') }}">Click here to delete your listing</a></p>
+		{% block body %}
+		{% endblock body %}
 	</body>
 </html>
 

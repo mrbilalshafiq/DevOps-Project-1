@@ -10,16 +10,21 @@ from wtforms_sqlalchemy.fields import QuerySelectField
 class AddForm(FlaskForm):
     ownername = StringField('Business Owner Name')
     businessname = StringField('Business Name')
-    submit = SubmitField('Add Businesse')
+    submit = SubmitField('Add Business')
 
-class UpdateForm(FlaskForm):
-    oldname = StringField('Current Business Name')
-    ownername = StringField("Business Owner's Name")
-    newname = StringField('New Business Name')
-    submit = SubmitField('Save Changes')
+#class UpdateForm(FlaskForm):
+   # oldname = StringField('Current Business Name')
+  #  ownername = StringField("Business Owner's Name")
+ #   newname = StringField('New Business Name')
+#    submit = SubmitField('Save Changes')
 
 def selectlist():
     return Business.query
+
+class UpdateForm(FlaskForm):
+    businessname = QuerySelectField('Select Business to Delete', query_factory=selectlist, allow_blank=True, get_label='name')
+    newname = StringField('New Business Name')
+    submit = SubmitField("Update Business")
 
 class DeleteForm(FlaskForm):
     businessname = QuerySelectField('Select Business to Delete', query_factory=selectlist, allow_blank=True, get_label='name')
@@ -55,9 +60,10 @@ def add():
         if len(ownername) == 0 or len(businessname) == 0:
             error = "Please supply both your name and the business name"
         else:
-            return 'You have now been added'
+            return render_template('added.html')
 
     return render_template('add.html', form=form, message=error)
+
 
 @app.route('/update', methods=['GET', 'POST'])
 def update():
@@ -65,24 +71,13 @@ def update():
     form = UpdateForm()
 
     if request.method == 'POST':
-        oldname = form.oldname.data
-        ownername = form.ownername.data
+        businessname = form.businessname.data
         newname = form.newname.data
-
-        owner = Owner.query.filter_by(name=ownername).first()
-        business = Business.query.filter_by(name=oldname).first()
-
-        if business.owner_id == owner.id:
-            business.name = newname
-            db.session.commit()
-            if newname == business.name:
-                return "Your changes have now been saved"
-        
-        else:
-            return "The details entered do not match our records"
+        businessname.name = newname
+        db.session.commit()
+        return render_template('updated.html')
 
     return render_template('update.html', form=form, message=error)
-
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
@@ -93,6 +88,6 @@ def delete():
         businessname = form.businessname.data
         db.session.delete(businessname)
         db.session.commit()
-        return "Your business has now been deleted"
+        return render_template('deleted.html')
     
     return render_template('delete.html', form=form, message=error)
