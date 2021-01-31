@@ -16,9 +16,10 @@ class BasicForm(FlaskForm):
 def home():
     return render_template('index.html')
 
-@app.route('/view')
+@app.route('/view', methods=['GET'])
 def view():
-    return render_template('view.html')
+    fulllist = Business.query.with_entities(Business.name)
+    return render_template('view.html', fulllist = fulllist) 
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
@@ -43,20 +44,6 @@ def add():
 
     return render_template('add.html', form=form, message=error)
 
-#@app.route('/add')
-#def add():
-#    new_game = Games(name="New Game")
-#    db.session.add(new_game)
-#    db.session.commit()
-#    return "Added new game to database"
-
-#@app.route('/read')
-#def read():
-#    all_games = Games.query.all()
-#    games_string = ""
-#    for game in all_games:
-#        games_string += "<br>"+ game.name
-#    return games_string
 
 #@app.route('/update/<name>')
 #def update(name):

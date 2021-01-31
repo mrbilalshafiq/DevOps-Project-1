@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<body>
-		<h1>View Listings</h1>
-	</body>
+    <head>
+        <title>View Businesses</title>
+    </head>
+    <body>
+	<h1>List of Restaurants:</h1>
+        <ul>
+	    {% for n in fulllist %}
+	    <tr>
+		<li>{{ n.name }}</li>
+	    </tr>
+	    {% endfor %}
+	</ul>
+    </body>
 </html>
