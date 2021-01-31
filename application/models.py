@@ -11,3 +11,8 @@ class Business(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
     owner_id = db.Column(db.Integer, db.ForeignKey('owner.id'), nullable=False)
+
+
+    def __repr__(self, name):
+        self.name = name
+        return '[Business {}]'.format(self.name) 
