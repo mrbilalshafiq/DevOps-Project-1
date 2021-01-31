@@ -6,10 +6,16 @@ from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, SubmitField
 
-class BasicForm(FlaskForm):
+class AddForm(FlaskForm):
     ownername = StringField('Business Owner Name')
     businessname = StringField('Business Name')
     submit = SubmitField('Add Businesse')
+
+class UpdateForm(FlaskForm):
+    oldname = StringField('Current Business Name')
+    ownername = StringField("Business Owner's Name")
+    newname = StringField('New Business Name')
+    submit = SubmitField('Save Changes')
 
 @app.route('/')
 @app.route('/home')
@@ -24,7 +30,7 @@ def view():
 @app.route('/add', methods=['GET', 'POST'])
 def add():
     error = ""
-    form = BasicForm()
+    form = AddForm()
 
     if request.method == 'POST':
         ownername = form.ownername.data
@@ -43,6 +49,30 @@ def add():
             return 'You have now been added'
 
     return render_template('add.html', form=form, message=error)
+
+@app.route('/update', methods=['GET', 'POST'])
+def update():
+    error = ""
+    form = UpdateForm()
+
+    if request.method == 'POST':
+        oldname = form.oldname.data
+        ownername = form.ownername.data
+        newname = form.newname.data
+
+        owner = Owner.query.filter_by(name=ownername).first()
+        business = Business.query.filter_by(name=oldname).first()
+
+        if business.owner_id == owner.id:
+            business.name = newname
+            db.session.commit()
+            if newname == business.name:
+                return "Your changes have now been saved"
+        
+        else:
+            return "The details entered do not match our records"
+
+    return render_template('update.html', form=form, message=error)
 
 
 #@app.route('/update/<name>')

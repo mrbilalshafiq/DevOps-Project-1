@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Business</title>
+    </head>
+    <body>
+        <h1>Edit Business</h1>
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.oldname.label }} {{ form.oldname }}
+                <br>
+                {{ form.ownername.label }} {{ form.ownername }}
+                <br>
+		{{ form.newname.label }} {{ form.newname }}
+                <br>
+                {{ form.submit }}
+            {{ message }}
+            </form>
+        </div>
+    </body>
+</html>
