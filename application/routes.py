@@ -6,24 +6,19 @@ from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField, SubmitField
 from wtforms_sqlalchemy.fields import QuerySelectField
+from wtforms.validators import DataRequired
 
 class AddForm(FlaskForm):
-    ownername = StringField('Business Owner Name')
-    businessname = StringField('Business Name')
+    ownername = StringField('Business Owner Name', validators=[DataRequired()])
+    businessname = StringField('Business Name', validators=[DataRequired()])
     submit = SubmitField('Add Business')
-
-#class UpdateForm(FlaskForm):
-   # oldname = StringField('Current Business Name')
-  #  ownername = StringField("Business Owner's Name")
- #   newname = StringField('New Business Name')
-#    submit = SubmitField('Save Changes')
 
 def selectlist():
     return Business.query
 
 class UpdateForm(FlaskForm):
     businessname = QuerySelectField('Select Business to Delete', query_factory=selectlist, allow_blank=True, get_label='name')
-    newname = StringField('New Business Name')
+    newname = StringField('New Business Name', validators=[DataRequired()])
     submit = SubmitField("Update Business")
 
 class DeleteForm(FlaskForm):
