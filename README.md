@@ -28,6 +28,7 @@ Although with only 2 tables, the amount of columns were proving to be a hinderan
 ![finalerd](https://github.com/mrbilalshafiq/halalworld/blob/main/images/Final%20ERD.jpeg)
 > My final ERD
 
+
 ## Kanban/Trello Board
 
 My kanban board displayed below shows, chornologically, the steps that I took to complete the application: creating the structure, seperating code into different files, creating models, then forms, then routes, then the html file and then repeating for each CRUD function until it became a fully functional CRUD application. I then performed unit tests in linux and in Jenkins. 
@@ -37,3 +38,10 @@ It also displayes the main hurdles and issues I came across that took the most t
 ![kanbanboard](https://github.com/mrbilalshafiq/halalworld/blob/main/images/Kanban.jpg)
 >My completed trello board
 
+
+## Testing within Jenkins
+
+After finishing writing the tests which gave me over 90% coverage, I configured Jenkins to run those tests within jenkins, which then produced a successful build.
+
+![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/91percentinjenkins.jpg)
+> As you can see just above, the build was a success and my coverage reached 91%.
