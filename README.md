@@ -43,5 +43,7 @@ It also displayes the main hurdles and issues I came across that took the most t
 
 After finishing writing the tests which gave me over 90% coverage, I configured Jenkins to run those tests within jenkins, which then produced a successful build.
 
-![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/91percentinjenkins.jpg)
-> As you can see just above, the build was a success and my coverage reached 91%.
+I then configured the build to deploy the application using gunicorn as shown in the picture below.
+
+![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/testedanddeployedonjenkinsusinggunicorn.png)
+> As you can see just above; the application passed the unit tests and then was successfully deployed on jenkins.
