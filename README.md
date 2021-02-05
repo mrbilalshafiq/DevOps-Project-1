@@ -45,5 +45,5 @@ After finishing writing the tests which gave me over 90% coverage, I configured 
 
 I then configured the build to deploy the application using gunicorn as shown in the picture below.
 
-![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/testedanddeployedonjenkinsusinggunicorn.png)
+![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/testedanddeployed.png)
 > As you can see just above; the application passed the unit tests and then was successfully deployed on jenkins.
