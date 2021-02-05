@@ -39,7 +39,7 @@ It also displayes the main hurdles and issues I came across that took the most t
 >My completed trello board
 
 
-## Testing within Jenkins
+## Testing & Deploying within Jenkins
 
 After finishing writing the tests which gave me over 90% coverage, I configured Jenkins to run those tests within jenkins, which then produced a successful build.
 
