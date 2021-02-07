@@ -47,3 +47,40 @@ I then configured the build to deploy the application using gunicorn as shown in
 
 ![jenkins](https://github.com/mrbilalshafiq/halalworld/blob/main/images/testedanddeployed.png)
 > As you can see just above; the application passed the unit tests and then was successfully deployed on jenkins.
+
+
+## Risk Assessment
+
+![RiskAssessment](https://github.com/mrbilalshafiq/halalworld/blob/main/images/Risk.jpg)
+>This risk assessment shows a non-exhaustive list of potential risks.
+
+## Future Improvements
+1. Implementation of CSS & Javascript
+2. Adding images and branding
+3. Adding login functionality
+4. Making the more secure in line with the principles of confidentiality, integrity and availability.
+5. Make it more user friendly
+6. Adding extra fields for user details and business details.
+7. More thorough testing, aiming for 100% (currently at 91%).
+
+## Conclusion
+As my first flask application, I am pleased that it is fully functional with 91% test coverage. I actually wrote the code from scratch twice which has cemented the concepts required to develop the application. Excluding the python programming language, all the tools used were new to me. These include:
+* Git
+* Trello
+* MySQL
+* GCP/AWS
+* Flask Framework
+ * Pytest
+ * Gunicorn
+ * UnitTest
+ * SQLAlchemy
+ * WTForms
+ * Jinja2
+* Jenkins
+
+I am also pleased with the process that I went through to create the app which is presented chronologically in my Trello board. The concepts clicked for me really quickly which has helped increase my confidence in my skills. The application itself is a MVP, minimum viable product, which is evident in the simplicity of design and use. It looks more like a skeleton of a website with CRUD functionality ready-to-go. Therefore this application could be built upon in the future, creating extra features and making it more user friendly and pleasing to the eye. I am concerned that there is no login functionality which means that anybody can edit and delete from the database but as this wasn't apart of the mark scheme, I decided to omit this from the app.
+
+## Author
+Mr. Bilal Shafiq
+
+
