@@ -1,6 +1,11 @@
 # Halal World
 > **_A business directory specifically for halal restaurants/take-aways_**
 
+## CI Pipeline
+
+![CIpipeline](https://github.com/mrbilalshafiq/halalworld/blob/main/images/CIpipeline.jpeg)
+> Trello, Lucidchart, AWS, Flask, Git, Jenkins, Pytest, Gunicorn
+
 ## Evolution of Software Application Designs
 
 ### Design 1
