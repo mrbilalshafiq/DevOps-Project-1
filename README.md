@@ -3,7 +3,7 @@
 
 ## CI Pipeline
 
-![CIpipeline](https://github.com/mrbilalshafiq/halalworld/blob/main/images/CIpipeline.jpeg)
+![CIpipeline](https://github.com/mrbilalshafiq/halalworld/blob/main/images/Lucid.jpeg)
 > Trello, Lucidchart, AWS, Flask, Git, Jenkins, Pytest, Gunicorn
 
 ## Evolution of Software Application Designs
