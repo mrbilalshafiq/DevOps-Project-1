@@ -1,6 +1,18 @@
 # Halal World
 > **_A business directory specifically for halal restaurants/take-aways_**
 
+## Scope 
+This project will be based upon:
+* Project Management
+* Python Fundamentals
+* Python Testing
+* Git
+* Basic Linux
+* Python Web Development
+* Continuous Integration
+* Cloud Fundamentals
+* Databases
+
 ## CI Pipeline
 
 ![CIpipeline](https://github.com/mrbilalshafiq/halalworld/blob/main/images/Lucid.jpeg)
