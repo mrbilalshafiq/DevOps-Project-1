@@ -1,5 +1,5 @@
-# Halal World
-> **_A business directory specifically for halal restaurants/take-aways_**
+# Online Business Directory
+> **_An online business directory with user-generated businesses_**
 
 ## Scope 
 This project will be based upon:
