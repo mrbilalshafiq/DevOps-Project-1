@@ -9,3 +9,4 @@ flask-testing
 flask_wtf
 pymysql
 wtforms-sqlalchemy
+itsdangerous==2.0.1
