@@ -8,7 +8,7 @@
          
 2. Clone the repo
 
-         git clone https://github.com/mrbilalshafiq/DevOps-Project-1     
+         git clone https://github.com/mrbilalshafiq/DevOps-Project-1 && cd $_
          
 3. Install the requirements
 
