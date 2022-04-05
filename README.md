@@ -8,35 +8,35 @@
          
 2. Clone the repo
 
-         git clone https://github.com/mrbilalshafiq/DevOps-Project-1
+         git clone https://github.com/mrbilalshafiq/DevOps-Project-1     
          
-3. Move into the folder with the requirements
+3. Install the requirements
 
-         cd DevOps-Project-1/application/      
+         pip3 install -r applications/requirements.txt
          
-4. Install the requirements
-
-         pip3 install -r requirements.txt
-         
-5. Log into MySQL
+4. Log into MySQL
 
          sudo mysql -u root
          
-6. Create the user which matches what is written in __init__.py
+5. Create the user which matches what is written in __init__.py
 
          CREATE USER 'bilalhalal'@'localhost' IDENTIFIED BY 'password';
          
-7. Grant the necessary privileges to the newly created user
+6. Grant the necessary privileges to the newly created user
 
          GRANT ALL PRIVILEGES ON *.* TO 'bilalhalal'@'localhost';
          
-8. Flush the privileges to update the privileges table
+7. Flush the privileges to update the privileges table
 
          FLUSH PRIVILEGES;
          
-9. Create the database which matches the database name written in __init__.py
+8. Create the database which matches the database name written in __init__.py
 
          CREATE DATABASE halalworlddb;
+         
+9. Exit out of MySQL
+
+         EXIT
          
 10. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
 
