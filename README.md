@@ -1,6 +1,47 @@
 # Online Business Directory
 > **_An online business directory with user-generated businesses_**
 
+## Step-by-Step Guide
+1. Update and install the necessary packages
+
+         sudo apt update && sudo apt install pip mysql-client mysql-server gunicorn -y
+         
+2. Clone the repo
+
+         git clone https://github.com/mrbilalshafiq/DevOps-Project-1
+         
+3. Move into the folder with the requirements
+
+         cd DevOps-Project-1/application/      
+         
+4. Install the requirements
+
+         pip3 install -r requirements.txt
+         
+5. Log into MySQL
+
+         sudo mysql -u root
+         
+6. Create the user which matches what is written in __init__.py
+
+         CREATE USER 'bilalhalal'@'localhost' IDENTIFIED BY 'password';
+         
+7. Grant the necessary privileges to the newly created user
+
+         GRANT ALL PRIVILEGES ON *.* TO 'bilalhalal'@'localhost';
+         
+8. Flush the privileges to update the privileges table
+
+         FLUSH PRIVILEGES;
+         
+9. Create the database which matches the database name written in __init__.py
+
+         CREATE DATABASE halalworlddb;
+         
+10. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
+
+         gunicorn --workers=4 --bind=0.0.0.0:5000 app:app         
+
 ## Scope 
 This project will be based upon:
 * Project Management
