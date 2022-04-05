@@ -4,7 +4,7 @@
 ## Step-by-Step Guide
 1. Update and install the necessary packages
 
-         sudo apt update && sudo apt install pip mysql-client mysql-server gunicorn -y
+         sudo apt update && sudo apt install pip mysql-client mysql-server gunicorn python-pytest -y
          
 2. Clone the repo & cd into the directory
 
