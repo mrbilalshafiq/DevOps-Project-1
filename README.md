@@ -37,8 +37,12 @@
 9. Exit out of MySQL
 
          EXIT
+
+10. Create the tables
+
+         python3 create.py
          
-10. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
+11. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
 
          gunicorn --workers=4 --bind=0.0.0.0:5000 app:app         
 
