@@ -12,7 +12,7 @@
          
 3. Install the requirements
 
-         pip3 install -r applications/requirements.txt
+         pip3 install -r application/requirements.txt
          
 4. Log into MySQL
 
