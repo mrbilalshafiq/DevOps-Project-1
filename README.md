@@ -6,7 +6,7 @@
 
          sudo apt update && sudo apt install pip mysql-client mysql-server gunicorn -y
          
-2. Clone the repo
+2. Clone the repo & cd into the directory
 
          git clone https://github.com/mrbilalshafiq/DevOps-Project-1 && cd DevOps-Project-1
          
@@ -45,6 +45,10 @@
 11. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
 
          gunicorn --workers=4 --bind=0.0.0.0:5000 app:app         
+         
+12. Stop the app correctly (using CTRL+Z will leave the process running)
+
+         CTRL+C          
 
 ## Scope 
 This project will be based upon:
