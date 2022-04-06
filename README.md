@@ -50,9 +50,9 @@
 
          python3 create.py
          
-13. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
+13. Start the app using Gunicorn
 
-         gunicorn --workers=4 --bind=0.0.0.0:5000 app:app         
+         python3 app.py        
          
 14. Stop the app correctly (using CTRL+Z will leave the process running)
 
