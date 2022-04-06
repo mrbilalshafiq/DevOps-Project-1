@@ -57,6 +57,9 @@
 14. Stop the app correctly (using CTRL+Z will leave the process running)
 
          CTRL+C          
+15. Deactive the virtual environment
+
+         deactivate
 
 ## Scope 
 This project will be based upon:
