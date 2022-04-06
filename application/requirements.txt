@@ -11,3 +11,4 @@ pymysql
 wtforms-sqlalchemy
 itsdangerous==2.0.1
 markupsafe==2.0.1
+cryptography
