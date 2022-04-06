@@ -15,7 +15,7 @@ def selectlist():
     return Business.query
 
 class UpdateForm(FlaskForm):
-    businessname = QuerySelectField('Select Business to Delete', query_factory=selectlist, allow_blank=True, get_label='name')
+    businessname = QuerySelectField('Select Business to Update', query_factory=selectlist, allow_blank=True, get_label='name')
     newname = StringField('New Business Name', validators=[DataRequired()])
     submit = SubmitField("Update Business")
 
