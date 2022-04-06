@@ -9,44 +9,56 @@
 2. Clone the repo & cd into the directory
 
          git clone https://github.com/mrbilalshafiq/DevOps-Project-1 && cd DevOps-Project-1
+
+3. Install a virtual environment so that your requirements do not affect the rest of the system
+
+         pip3 install virtualenv
          
-3. Install the requirements
+4. Initiate the virtual environment
+
+         virtualenv venv
+         
+5. Activate the virtual environment
+
+         source venv/bin/activate
+
+6. Install the requirements
 
          pip3 install -r application/requirements.txt
          
-4. Log into MySQL
+7. Log into MySQL
 
          sudo mysql -u root
          
-5. Create the user which matches what is written in __init__.py
+8. Create the user which matches what is written in __init__.py
 
          CREATE USER 'bilalhalal'@'localhost' IDENTIFIED BY 'password';
          
-6. Grant the necessary privileges to the newly created user
+9. Grant the necessary privileges to the newly created user
 
          GRANT ALL PRIVILEGES ON *.* TO 'bilalhalal'@'localhost';
          
-7. Flush the privileges to update the privileges table
+10. Flush the privileges to update the privileges table
 
          FLUSH PRIVILEGES;
          
-8. Create the database which matches the database name written in __init__.py
+11. Create the database which matches the database name written in __init__.py
 
          CREATE DATABASE halalworlddb;
          
-9. Exit out of MySQL
+12. Exit out of MySQL
 
          EXIT
 
-10. Create the tables
+13. Create the tables
 
          python3 create.py
          
-11. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
+14. Start the app using Gunicorn (an alternative to the command below would be running "python3 app.py")
 
          gunicorn --workers=4 --bind=0.0.0.0:5000 app:app         
          
-12. Stop the app correctly (using CTRL+Z will leave the process running)
+15. Stop the app correctly (using CTRL+Z will leave the process running)
 
          CTRL+C          
 
